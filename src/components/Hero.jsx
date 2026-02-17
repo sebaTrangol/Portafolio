@@ -18,13 +18,13 @@ export default function Hero() {
               Combino rigor técnico con innovación para entregar soluciones de alta calidad.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mb-12">
-              
+              <a
                 href="#projects"
                 className="bg-primary-500 text-primary-950 px-8 py-3 rounded-lg font-semibold hover:bg-primary-400 transition-all flex items-center justify-center gap-2"
               >
                 Ver Proyectos <ArrowRight size={20} />
               </a>
-              
+              <a
                 href="#contact"
                 className="border-2 border-primary-500 text-primary-500 px-8 py-3 rounded-lg font-semibold hover:bg-primary-500 hover:text-primary-950 transition-all"
               >
