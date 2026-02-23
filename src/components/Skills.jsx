@@ -1,30 +1,52 @@
-import { Code2, TestTube2, Database, Zap } from 'lucide-react';
+import { Code2, TestTube2, Database, Wrench, Users } from 'lucide-react';
 
 export default function Skills() {
   const skillCategories = [
     {
       category: 'Testing & QA',
       icon: TestTube2,
-      skills: ['Selenium', 'Postman', 'Jira', 'JUnit', 'Manual Testing'],
+      skills: [
+        'Selenium',
+        'Cucumber ',
+        'Postman',
+        'Appium',
+        'RestAssured',
+        'Locust ',
+        'TestNG',
+        'JUnit',
+        'Manual Testing',
+        'API Testing',
+        'Spring Boot',
+        'Page Object Model (POM)',
+        'TestGrid',
+        'Android Studio',
+        'Jira',
+      ],
       color: 'text-primary-500',
     },
     {
-      category: 'Desarrollo',
+      category: 'Lenguajes & Frameworks',
       icon: Code2,
-      skills: ['React Native', 'JavaScript', 'Java', 'HTML/CSS', 'Git'],
+      skills: ['JavaScript', 'TypeScript', 'Java', 'React Native', 'Node.js', 'Express', 'Python'],
       color: 'text-secondary-500',
     },
     {
       category: 'Bases de Datos',
       icon: Database,
-      skills: ['SQL', 'Firebase', 'Queries', 'Stored Procedures', 'Data Analysis'],
+      skills: ['SQL Server', 'Firebase', 'DBeaver'],
       color: 'text-primary-500',
     },
     {
-      category: 'Herramientas',
-      icon: Zap,
-      skills: ['Automation', 'CI/CD', 'Figma', 'VS Code', 'DevTools'],
+      category: 'DevOps & Herramientas',
+      icon: Wrench,
+      skills: ['Git', 'GitHub', 'Bitbucket', 'Jenkins', 'Vercel', 'VS Code'],
       color: 'text-secondary-500',
+    },
+    {
+      category: 'Metodologías',
+      icon: Users,
+      skills: ['Agile', 'Kanban'],
+      color: 'text-primary-500',
     },
   ];
 
@@ -32,7 +54,7 @@ export default function Skills() {
     <section className="py-20 bg-primary-950">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-4xl font-bold text-light-50 mb-12">Stack Técnico</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category) => {
             const Icon = category.icon;
             return (

@@ -8,10 +8,10 @@ export default function Hero() {
           <div className="fade-in-up">
             <h1 className="text-5xl md:text-6xl font-bold text-light-50 mb-6 leading-tight">
               José Trangol
-              <span className="text-primary-500"> QA Engineer</span>
+              <span className="text-primary-500"> QA Sr.</span>
             </h1>
             <p className="text-lg text-light-100 mb-4 leading-relaxed">
-              Especialista en testing y QA con experiencia en Banco Scotiabank.
+              Especialista en testing y QA con experiencia en Banca.
               Apasionado por la tecnología, desarrollo fullstack y calidad del software.
             </p>
             <p className="text-light-100 mb-8 leading-relaxed">

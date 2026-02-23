@@ -7,7 +7,7 @@ export default function Contact() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-light-50 mb-4">Vamos a Trabajar Juntos</h2>
           <p className="text-light-100 text-lg">
-            ¿Tienes un proyecto en mente? Me encantaría escucharte y explorar cómo puedo ayudarte.
+            ¿Tienes un proyecto en mente?
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
