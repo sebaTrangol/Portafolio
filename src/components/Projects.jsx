@@ -39,9 +39,9 @@ export default function Projects() {
             Una selección de mis mejores trabajos en desarrollo, testing y QA. Cada proyecto representa mi compromiso con la calidad, la innovación y la pasión por el desarrollo de software.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="flex flex-col gap-12">
           {projects.map((project, index) => (
-            <ProjectCard key={index} project={project} />
+            <ProjectCard key={index} project={project} index={index} />
           ))}
         </div>
       </div>
