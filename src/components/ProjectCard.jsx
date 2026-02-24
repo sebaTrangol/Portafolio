@@ -6,12 +6,11 @@ export default function ProjectCard({ project, index }) {
   return (
     <div className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-8 items-stretch shadow-lg shadow-primary-500/10 rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300`}>
       {/* Image Section */}
-      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[45%] h-64 md:h-80 lg:h-96 bg-gradient-to-br from-primary-500 to-secondary-500 flex items-center justify-center overflow-hidden rounded-lg md:rounded-none">
+      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-72 md:h-[420px] lg:h-[480px] bg-primary-950 flex items-center justify-center overflow-hidden rounded-lg md:rounded-none p-4">
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-          style={project.imagePosition ? { objectPosition: project.imagePosition } : {}}
+          className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105"
         />
       </div>
 
