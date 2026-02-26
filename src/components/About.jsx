@@ -9,10 +9,10 @@ export default function About() {
               Soy <span className="text-primary-500 font-semibold">Analista Programador Computacional</span> titulado en Duoc UC, apasionado por la tecnología, inteligencia artificial, desarrollo web y móvil.
             </p>
             <p className="text-light-100 text-lg mb-6 leading-relaxed">
-              Actualmente trabajo como <span className="text-primary-500 font-semibold">Analista QA en Banco Scotiabank</span>, donde lidero certificaciones de productos y procesos críticos.
+              Actualmente trabajo como <span className="text-primary-500 font-semibold">Analista QA en Banco Scotiabank</span>, certificando proyectos e iniciativas de tecnología financiera, grantizando estándares de calidad.
             </p>
             <p className="text-light-100 text-lg mb-8 leading-relaxed">
-              Mi enfoque se basa en aprender constantemente, adaptarme a nuevos desafíos y aportar valor a través de soluciones tecnológicas eficientes y de alta calidad.
+              Mi enfoque se basa en aprender constantemente, adaptarme a nuevos desafíos y aportar valor a través de soluciones tecnológicas eficientes.
             </p>
           </div>
           <div>
@@ -23,7 +23,7 @@ export default function About() {
                 <p className="text-primary-500 font-medium mb-2">Banco Scotiabank</p>
                 <p className="text-light-100 text-sm mb-3">2023 - Presente</p>
                 <ul className="text-light-100 space-y-2 text-sm">
-                  <li>✓ Certificación de apps móviles, plataformas web, APIs y sistemas core bancarios</li>
+                  <li>✓ Certificación de proyectos móviles, plataformas web, APIs y sistemas core bancarios</li>
                   <li>✓ Automatización de flujos repetitivos como creación de clientes, altas de tarjetas de crédito y otros procesos en ambientes QA</li>
                   <li>✓ Liderazgo en procesos de certificación de alto impacto y productos financieros críticos</li>
                 </ul>

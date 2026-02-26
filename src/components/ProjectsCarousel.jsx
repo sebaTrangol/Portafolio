@@ -26,7 +26,7 @@ export default function ProjectsCarousel({ children }) {
 
       {/* Navigation Arrows + Dots — below the card */}
       {total > 1 && (
-        <div className="flex items-center justify-center gap-6 mt-8">
+        <div className="flex items-center justify-center gap-6 mt-4">
           <button
             onClick={prev}
             className="bg-primary-800/80 hover:bg-primary-700 text-primary-500 p-2 md:p-3 rounded-full transition-all shadow-lg border border-primary-500/30"
