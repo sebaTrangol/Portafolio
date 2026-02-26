@@ -1,26 +1,52 @@
-import { ExternalLink, Github } from 'lucide-react';
+import { ExternalLink, Github, Construction } from 'lucide-react';
+import ImageCarousel from './ImageCarousel';
 
-export default function ProjectCard({ project, index }) {
-  const isImageLeft = index % 2 === 0;
+export default function ProjectCard({ project }) {
+  const renderMedia = () => {
+    if (project.comingSoon) {
+      return (
+        <div className="relative w-full h-full flex flex-col items-center justify-center bg-primary-950 rounded-lg overflow-hidden p-6 gap-4">
+          <Construction size={48} className="text-primary-500 animate-pulse" />
+          <p className="text-light-50 text-lg md:text-xl font-semibold text-center">
+            {project.comingSoonMessage || 'En construccion'}
+          </p>
+          <span className="text-primary-500 text-sm font-medium bg-primary-500/10 px-4 py-1.5 rounded-full border border-primary-500/30">
+            Proximamente
+          </span>
+        </div>
+      );
+    }
+
+    if (project.video) {
+      return (
+        <div className="relative w-full h-full flex items-center justify-center bg-primary-950 rounded-lg overflow-hidden p-4">
+          <video
+            src={project.video}
+            controls
+            playsInline
+            className="max-w-full max-h-full object-contain drop-shadow-2xl rounded-lg"
+          />
+        </div>
+      );
+    }
+
+    return <ImageCarousel images={project.images} />;
+  };
 
   return (
-    <div className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} gap-6 md:gap-8 items-stretch shadow-lg shadow-primary-500/10 rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300`}>
-      {/* Image Section */}
-      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-72 md:h-[420px] lg:h-[480px] bg-primary-950 flex items-center justify-center overflow-hidden rounded-lg md:rounded-none p-4">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="max-w-full max-h-full object-contain drop-shadow-2xl transition-transform duration-300 hover:scale-105"
-        />
+    <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-stretch shadow-lg shadow-primary-500/10 rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300">
+      {/* Media Section */}
+      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-72 md:h-[420px] lg:h-[480px] overflow-hidden rounded-lg md:rounded-none">
+        {renderMedia()}
       </div>
 
       {/* Content Section */}
-      <div className="flex-1 flex flex-col justify-start p-6 md:p-8">
-        <h3 className="text-2xl md:text-3xl font-semibold text-light-50 mb-3">{project.title}</h3>
-        <p className="text-light-100 text-sm md:text-base mb-6 leading-relaxed">{project.description}</p>
+      <div className="flex-1 flex flex-col justify-start p-5 md:p-6">
+        <h3 className="text-2xl md:text-3xl font-semibold text-light-50 mb-2">{project.title}</h3>
+        <p className="text-light-100 text-sm md:text-base mb-5 leading-relaxed whitespace-pre-wrap">{project.description}</p>
 
         {/* Tech Tags */}
-        <div className="flex flex-wrap gap-2 mb-8">
+        <div className="flex flex-wrap gap-2 mb-6">
           {project.tech.map((tech) => (
             <span
               key={tech}
