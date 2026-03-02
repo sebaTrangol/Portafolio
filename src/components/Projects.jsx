@@ -8,7 +8,7 @@ export default function Projects() {
       description: `App móvil bancaria fullstack para testing QA. Frontend en React Native con Expo y backend REST en Node.js con Express y SQLite, ambos en TypeScript.
 Incluye autenticación JWT con sesiones persistidas, consulta de cuentas con saldos, historial de movimientos y transferencias.
 El backend incorpora un sistema de QA Flags que permite simular latencia, errores forzados, modo offline y expiración de sesión, facilitando pruebas de escenarios reales sin modificar código.`,
-      video: '/banking-demo-15s.mp4',
+      video: '/banking-flow.mp4',
       tech: ['React Native', 'Expo', 'TypeScript', 'Node.js', 'Express', 'SQLite', 'JWT'],
       github: 'https://github.com/sebaTrangol/banking-qa-platform-backend',
       githubLabel: 'Github Backend',
@@ -35,11 +35,11 @@ El backend incorpora un sistema de QA Flags que permite simular latencia, errore
   ];
 
   return (
-    <section id="projects" className="py-16 bg-primary-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="mb-12">
-          <h2 className="text-4xl font-bold text-light-50 mb-4">Mis Proyectos</h2>
-          <p className="text-light-100 text-lg max-w-2xl">
+    <section id="projects" className="py-12 sm:py-16 bg-primary-900">
+      <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <div className="mb-8 sm:mb-12">
+          <h2 className="text-3xl sm:text-4xl font-bold text-light-50 mb-3 sm:mb-4">Mis Proyectos</h2>
+          <p className="text-light-100 text-sm sm:text-base md:text-lg max-w-2xl">
             Una seleccion de mis mejores trabajos en desarrollo, testing y QA. Cada proyecto representa mi compromiso con la calidad, la innovacion y la pasion por el desarrollo de software.
           </p>
         </div>

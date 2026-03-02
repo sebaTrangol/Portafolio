@@ -51,21 +51,21 @@ export default function Skills() {
   ];
 
   return (
-    <section className="py-20 bg-primary-950">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl font-bold text-light-50 mb-12">Stack Técnico</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <section className="py-12 sm:py-16 md:py-20 bg-primary-950">
+      <div className="max-w-6xl mx-auto px-4 sm:px-5 md:px-6 lg:px-8">
+        <h2 className="text-3xl sm:text-4xl font-bold text-light-50 mb-8 sm:mb-12">Stack Técnico</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {skillCategories.map((category) => {
             const Icon = category.icon;
             return (
-              <div key={category.category} className="bg-primary-900 rounded-xl p-6 border border-primary-500 hover:border-secondary-500 transition-all">
-                <div className={`${category.color} mb-4`}>
-                  <Icon size={32} />
+              <div key={category.category} className="bg-primary-900 rounded-xl p-4 sm:p-6 border border-primary-500 hover:border-secondary-500 transition-all">
+                <div className={`${category.color} mb-3 sm:mb-4`}>
+                  <Icon size={28} className="sm:w-8 sm:h-8" />
                 </div>
-                <h3 className="text-lg font-semibold text-light-50 mb-4">{category.category}</h3>
-                <div className="flex flex-wrap gap-2">
+                <h3 className="text-base sm:text-lg font-semibold text-light-50 mb-3 sm:mb-4">{category.category}</h3>
+                <div className="flex flex-wrap gap-1.5 sm:gap-2">
                   {category.skills.map((skill) => (
-                    <span key={skill} className="bg-primary-950 text-light-100 text-xs px-3 py-1 rounded-full border border-primary-500">
+                    <span key={skill} className="bg-primary-950 text-light-100 text-xs px-2.5 sm:px-3 py-0.5 sm:py-1 rounded-full border border-primary-500">
                       {skill}
                     </span>
                   ))}
