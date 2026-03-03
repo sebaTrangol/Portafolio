@@ -26,25 +26,25 @@ export default function ProjectsCarousel({ children }) {
 
       {/* Navigation Arrows + Dots — below the card */}
       {total > 1 && (
-        <div className="flex items-center justify-center gap-3 sm:gap-4 md:gap-6 mt-3 sm:mt-4 md:mt-6">
+        <div className="flex items-center justify-center gap-2 sm:gap-4 md:gap-6 mt-4 sm:mt-5 md:mt-6">
           <button
             onClick={prev}
-            className="bg-primary-800/80 hover:bg-primary-700 text-primary-500 p-1.5 sm:p-2 md:p-3 rounded-full transition-all shadow-lg border border-primary-500/30"
+            className="bg-primary-800/80 hover:bg-primary-700 text-primary-500 p-2 sm:p-2.5 md:p-3 rounded-full transition-all shadow-lg border border-primary-500/30"
             aria-label="Proyecto anterior"
           >
-            <ChevronLeft size={18} className="sm:w-6 sm:h-6" />
+            <ChevronLeft size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6" />
           </button>
 
           {/* Dots */}
-          <div className="flex gap-2 sm:gap-3">
+          <div className="flex gap-1.5 sm:gap-3">
             {Array.from({ length: total }).map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`h-2 sm:h-3 rounded-full transition-all duration-300 ${
+                className={`rounded-full transition-all duration-300 ${
                   i === current
-                    ? 'bg-primary-500 w-8 sm:w-10'
-                    : 'bg-primary-700 hover:bg-primary-600 w-2 sm:w-3'
+                    ? 'bg-primary-500 h-2.5 sm:h-3 w-8 sm:w-10'
+                    : 'bg-primary-700 hover:bg-primary-600 h-2.5 sm:h-3 w-2.5 sm:w-3'
                 }`}
                 aria-label={`Ir al proyecto ${i + 1}`}
               />
@@ -53,10 +53,10 @@ export default function ProjectsCarousel({ children }) {
 
           <button
             onClick={next}
-            className="bg-primary-800/80 hover:bg-primary-700 text-primary-500 p-1.5 sm:p-2 md:p-3 rounded-full transition-all shadow-lg border border-primary-500/30"
+            className="bg-primary-800/80 hover:bg-primary-700 text-primary-500 p-2 sm:p-2.5 md:p-3 rounded-full transition-all shadow-lg border border-primary-500/30"
             aria-label="Proyecto siguiente"
           >
-            <ChevronRight size={18} className="sm:w-6 sm:h-6" />
+            <ChevronRight size={20} className="sm:w-6 sm:h-6 md:w-6 md:h-6" />
           </button>
         </div>
       )}

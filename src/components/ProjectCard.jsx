@@ -49,7 +49,7 @@ export default function ProjectCard({ project }) {
   return (
     <div className="flex flex-col md:flex-row gap-3 md:gap-8 items-stretch shadow-lg shadow-primary-500/10 rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300">
       {/* Media Section */}
-      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-48 sm:h-56 md:h-[420px] lg:h-[480px] overflow-hidden rounded-lg md:rounded-none">
+      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-56 sm:h-60 md:h-[420px] lg:h-[480px] overflow-hidden rounded-lg md:rounded-none">
         {renderMedia()}
       </div>
 
