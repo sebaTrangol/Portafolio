@@ -1,7 +1,7 @@
-import { ExternalLink, Github, Construction } from 'lucide-react';
+import { ExternalLink, Github, Construction, ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageCarousel from './ImageCarousel';
 
-export default function ProjectCard({ project }) {
+export default function ProjectCard({ project, carouselProps }) {
   const renderMedia = () => {
     if (project.comingSoon) {
       return (
@@ -46,12 +46,53 @@ export default function ProjectCard({ project }) {
     );
   };
 
+  const { current, total, prev, next, setCurrent } = carouselProps || {};
+  const showNav = total > 1;
+
   return (
-    <div className="flex flex-col md:flex-row gap-3 md:gap-8 items-stretch shadow-lg shadow-primary-500/10 rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300">
-      {/* Media Section */}
-      <div className="flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-56 sm:h-60 md:h-[420px] lg:h-[480px] overflow-hidden rounded-lg md:rounded-none">
+    <div className="flex flex-col md:flex-row gap-0 md:gap-8 items-stretch shadow-lg shadow-primary-500/10 rounded-lg overflow-hidden hover:shadow-xl hover:shadow-primary-500/20 transition-all duration-300">
+      {/* Media Section — with mobile arrow overlays */}
+      <div className="relative flex-shrink-0 w-full md:w-5/12 lg:w-[40%] h-56 sm:h-60 md:h-[420px] lg:h-[480px] overflow-hidden rounded-t-lg md:rounded-none">
         {renderMedia()}
+
+        {/* Mobile-only arrow overlays on the video */}
+        {showNav && (
+          <>
+            <button
+              onClick={prev}
+              className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 bg-primary-900/80 hover:bg-primary-800 text-primary-500 p-2 rounded-full border border-primary-500/50 backdrop-blur-sm z-10 transition-all"
+              aria-label="Proyecto anterior"
+            >
+              <ChevronLeft size={20} />
+            </button>
+            <button
+              onClick={next}
+              className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 bg-primary-900/80 hover:bg-primary-800 text-primary-500 p-2 rounded-full border border-primary-500/50 backdrop-blur-sm z-10 transition-all"
+              aria-label="Proyecto siguiente"
+            >
+              <ChevronRight size={20} />
+            </button>
+          </>
+        )}
       </div>
+
+      {/* Mobile-only dots — between media and content */}
+      {showNav && (
+        <div className="md:hidden flex items-center justify-center gap-2 py-2 bg-primary-900/50">
+          {Array.from({ length: total }).map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`rounded-full transition-all duration-300 ${
+                i === current
+                  ? 'bg-primary-500 h-2.5 w-8'
+                  : 'bg-primary-700 hover:bg-primary-600 h-2.5 w-2.5'
+              }`}
+              aria-label={`Ir al proyecto ${i + 1}`}
+            />
+          ))}
+        </div>
+      )}
 
       {/* Content Section */}
       <div className="flex-1 flex flex-col justify-start p-3 sm:p-4 md:p-6">
