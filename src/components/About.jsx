@@ -29,7 +29,7 @@ export default function About() {
                 </ul>
               </div>
               <div className="border-l-4 border-secondary-500 pl-4 sm:pl-6">
-                <h4 className="text-lg sm:text-xl font-semibold text-light-50 mb-1 sm:mb-2">Developer & QA</h4>
+                <h4 className="text-lg sm:text-xl font-semibold text-light-50 mb-1 sm:mb-2">Desarrollo Proyectos Personales</h4>
                 <p className="text-secondary-500 font-medium mb-1 sm:mb-2 text-sm sm:text-base">Freelance</p>
                 <p className="text-light-100 text-xs sm:text-sm mb-2 sm:mb-3">2022 - Presente</p>
                 <ul className="text-light-100 space-y-1 sm:space-y-2 text-xs sm:text-sm">
